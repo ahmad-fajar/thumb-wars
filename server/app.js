@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cors = require('cors')
 var compression = require('compression')
+var mongoose = require('mongoose')
 require('dotenv').config()
 
 var index = require('./routes/index');
@@ -39,5 +40,12 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.send('error');
 });
+
+mongoose.Promise = global.Promise
+
+var DB_URL = `mongodb://localhost/thumb_wars`
+mongoose.connect(DB_URL, err => {
+  err ? console.log(err) : console.log('databse connected')
+})
 
 module.exports = app;
