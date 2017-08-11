@@ -18,6 +18,7 @@
         </button>
       </div>
 
+      <!-- Jadiin components -->
       <!-- Modal -->
       <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -61,12 +62,6 @@
                     <p class="detail-text" ><strong>Jika ini bukan giliranmu, maka kamu harus menebak antara 0 hinga 2</strong></p>
                   </div>
 
-
-
-
-
-
-
                 </div>
               </div>
 
@@ -77,6 +72,8 @@
           </div>
         </div>
       </div>
+      <!-- Modal -->
+      <!-- Jadiin components -->
 
     </nav>
   </div>
