@@ -12,6 +12,23 @@
           <li class="nav-item active">
             <a class="nav-link" href="#">Team <span class="sr-only">(current)</span></a>
           </li>
+
+          <!-- join - out -->
+          <li class="nav-item active" >
+            <router-link class="nav-link" to="login" v-if="!nama">Join</router-link>
+          </li>
+          <li class="nav-item active" v-if="nama&&nama!=''">
+            <button type="button" class="btn btn-primary" @click="logout()">Out</button>
+          </li>
+          <!-- <li class="nav-item active" v-if="nama">
+            <a class="nav-link" href="login" @click="logout()">Out</a>
+          </li> -->
+
+          <!-- tes nama -->
+          <!-- <li class="nav-item active">
+            <a class="nav-link" href="#">{{nama}}</a>
+          </li> -->
+
         </ul>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
           Cara bermain
@@ -28,6 +45,20 @@
 <script>
 import Modalhowtoplay from '@/components/Modalhowtoplay'
 export default {
+  data () {
+    return {
+      nama: localStorage.getItem('username')
+    }
+  },
+
+  methods: {
+    logout () {
+      console.log('logout')
+      localStorage.removeItem('username')
+      this.$router.push('Game')
+    }
+  },
+
   components: {
     Modalhowtoplay
   }
