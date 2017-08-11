@@ -24,10 +24,10 @@ export default {
 }
 
 /*From own CSS*/
-
 /** {
-  border: 1px solid white;
+  border: 1px solid black;
 }*/
+
 
 body {
   background-color: black;
@@ -76,5 +76,15 @@ img {
   border-radius: 50px;
   color: #fff;
 }
+
+.score-board {
+  height: 300px;
+  width: auto;
+}
+
+.detail-text {
+  margin-top: 10px;
+}
+
 
 </style>
