@@ -78,7 +78,7 @@ img {
 }
 
 .score-board {
-  height: 300px;
+  height: 200px;
   width: auto;
 }
 
