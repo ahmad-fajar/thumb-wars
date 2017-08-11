@@ -19,6 +19,7 @@ app.use(cookieParser());
 app.use(cors())
 app.use(compression())
 
+app.use(require('./user-routes'));
 app.use('/', index);
 app.use('/api/users', users);
 

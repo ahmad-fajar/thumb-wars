@@ -12,6 +12,20 @@
           <li class="nav-item active">
             <a class="nav-link" href="#">Team <span class="sr-only">(current)</span></a>
           </li>
+
+          <!-- signup -->
+          <li class="nav-item active" v-if="!user.authenticated">
+            <router-link class="nav-link" to="/signup">Sign Up</router-link>
+          </li>
+
+          <!-- login - logout -->
+          <li class="nav-item active" v-if="!user.authenticated">
+            <router-link class="nav-link" to="login">Login</router-link>
+          </li>
+          <li class="nav-item active" v-if="user.authenticated">
+            <router-link class="nav-link" to="login" @click="logout()">Logout</router-link>
+          </li>
+
         </ul>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
           Cara bermain
@@ -62,7 +76,20 @@
 </template>
 
 <script>
+import auth from '../auth'
 export default {
+  data () {
+    return {
+      user: auth.user
+    }
+  },
+
+  methods: {
+
+    logout () {
+      auth.logout()
+    }
+  }
 }
 </script>
 
