@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Navbar from '@/components/Game'
+import Navbar from '@/components/Navbar'
 import FirstRow from '@/components/FirstRow'
 import SecondRow from '@/components/SecondRow'
 import ThirdRow from '@/components/ThirdRow'
