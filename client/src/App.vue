@@ -29,10 +29,6 @@ export default {
 
 /*From own CSS*/
 
-* {
-  border: 1px solid white;
-}
-
 body {
   background-color: black;
 }
