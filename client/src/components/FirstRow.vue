@@ -26,12 +26,12 @@
         <div class="row">
           <div class="col">
             <center>
-              <img src="/resources/img/pumpkin.png" alt="pumpkin icon">
+              <img src="../assets/img/pumpkin.png" alt="pumpkin icon">
             </center>
           </div>
           <div class="col">
             <center>
-              <img src="/resources/img/pumpkin.png" alt="pumpkin icon">
+              <img src="../assets/img/pumpkin.png" alt="pumpkin icon">
             </center>
           </div>
         </div>
