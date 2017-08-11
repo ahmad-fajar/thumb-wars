@@ -46,8 +46,8 @@ img {
 }
 
 .container {
-  width: 95%;
-  margin: 10px 10px;
+  width: 50%;
+  margin-left: 310px;
 }
 
 .container-fluid {
