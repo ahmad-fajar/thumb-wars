@@ -1,20 +1,30 @@
 <template lang="html">
   <!-- third row -->
+
+  <!-- Ini row utama third row -->
   <div class="row">
+  <!-- Jangan dijadiin components -->
+
+    <!-- Ini column pertama -->
+    <!-- Ini cuma column kosong, terserah jadiin apa gak -->
     <div class="col">
       <!-- blank -->
     </div>
+
+    <!-- Ini column kedua -->
+    <!-- Kasih aja nama: Mummyman.vue atau apa aja -->
+    <!-- Karena ini column karakter mummyman -->
     <div class="col">
 
       <div class="row">
         <div class="col">
           <center>
-            <img src="../assets/img/mummyman.png" alt="pumpkin icon">
+            <img src="../assets/img/mummyman.png" alt="mummyman icon">
           </center>
         </div>
         <div class="col">
           <center>
-            <img src="../assets/img/mummyman.png" alt="pumpkin icon">
+            <img src="../assets/img/mummyman.png" alt="mummyman icon">
           </center>
         </div>
       </div>
@@ -38,10 +48,17 @@
       </div>
 
     </div>
+
+    <!-- Ini column ketiga -->
+    <!-- Ini cuma column kosong, terserah jadiin apa gak -->
     <div class="col">
       <!-- blank -->
     </div>
+
+  <!-- Ini row utama third row -->
   </div>
+  <!-- Jangan dijadiin components -->
+
 </template>
 
 <script>

@@ -1,13 +1,24 @@
 <template lang="html">
   <!-- first row -->
+
+    <!-- Ini row utama first row -->
     <div class="row">
+    <!-- Jangan dijadiin components -->
+
+      <!-- Ini column pertama -->
+      <!-- Ini cuma column kosong, terserah jadiin apa gak -->
       <div class="col">
         <!-- blank -->
       </div>
+
+      <!-- Ini column kedua -->
+      <!-- Kasih aja nama: Pumpkin.vue atau apa aja -->
+      <!-- Karena ini column karakter pumpkin -->
       <div class="col">
+
         <div class="row">
           <div class="col">
-            <center>          
+            <center>
               <a href="#" class="btn btn-md active" role="button" aria-pressed="true">0</a>
             </center>
           </div>
@@ -35,11 +46,20 @@
             </center>
           </div>
         </div>
+
       </div>
+      <!-- Ini column kedua -->
+
+      <!-- Ini column ketiga -->
+      <!-- Ini cuma column kosong, terserah jadiin apa gak -->
       <div class="col">
         <!-- blank -->
       </div>
+
+    <!-- Ini row utama Second row -->
     </div>
+    <!-- Jangan dijadiin components -->
+
 </template>
 
 <script>
