@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <navbar></navbar>
     <div class="container-fluid">
       <router-view></router-view>
     </div>
@@ -8,12 +7,9 @@
 </template>
 
 <script>
-import Navbar from '@/components/Navbar'
 export default {
   name: 'app',
-  components: {
-    Navbar
-  }
+  components: {}
 }
 </script>
 
@@ -29,6 +25,13 @@ export default {
 
 /*From own CSS*/
 
+<<<<<<< HEAD
+=======
+/** {
+  border: 1px solid white;
+}*/
+
+>>>>>>> 3beb06914846c6ca881133b0385830105ecdf34a
 body {
   background-color: black;
 }
@@ -46,8 +49,8 @@ img {
 }
 
 .container {
-  width: 95%;
-  margin: 10px 10px;
+  width: 50%;
+  margin-left: 310px;
 }
 
 .container-fluid {
