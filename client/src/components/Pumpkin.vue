@@ -35,6 +35,14 @@
       </div>
     </div>
 
+    <div class="row">
+      <div class="col">
+        <p>
+          <h4 class="username">Username</h4>
+        </p>
+      </div>
+    </div>
+
   </div>
   <!-- Ini column kedua -->
 </template>

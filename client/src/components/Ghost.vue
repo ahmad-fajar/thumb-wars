@@ -3,6 +3,14 @@
 
     <div class="row">
       <div class="col">
+        <p>
+          <h4 class="username">Username</h4>
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
         <center>
           <img src="../assets/img/ghost.png" alt="ghost icon">
         </center>

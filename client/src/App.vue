@@ -25,9 +25,12 @@ export default {
 
 /*From own CSS*/
 /** {
-  border: 1px solid black;
+  border: 1px solid white;
 }*/
 
+#app {
+  margin-top: 10px;
+}
 
 body {
   background-color: black;
@@ -55,7 +58,7 @@ img {
 }
 
 .col {
-  margin: 20px 10px;
+  margin: 5px 5px;
 }
 
 .col-btn {
@@ -86,5 +89,8 @@ img {
   margin-top: 10px;
 }
 
+.username {
+  color: #fff;
+}
 
 </style>

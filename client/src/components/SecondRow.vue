@@ -18,6 +18,14 @@
 
       <div class="row">
         <div class="col">
+          <p>
+            <h4 class="username"><strong>Score Board</strong></h4>
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
           <div class="score-board">
 
           </div>
