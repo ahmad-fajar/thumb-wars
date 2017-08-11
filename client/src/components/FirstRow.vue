@@ -1,12 +1,5 @@
 <template lang="html">
-  <!-- first row -->
-
-    <!-- Ini row utama first row -->
     <div class="row">
-    <!-- Jangan dijadiin components -->
-
-      <!-- Ini column pertama -->
-      <!-- Ini cuma column kosong, terserah jadiin apa gak -->
       <div class="col">
         <!-- blank -->
         <h1>Player Turn: {{ thumbs[0].gameTurn }}</h1>
@@ -20,22 +13,27 @@
           </div>
         </div>
         <h2> {{ thumbs[0].player1.playerName }}: {{ thumbs[0].player1.choosedValue }}</h2>
-      
-      <!-- Ini column ketiga -->
-      <!-- Ini cuma column kosong, terserah jadiin apa gak -->
-      <div class="col">
-        <!-- blank -->
+
+        <div class="row">
+          <div class="col">
+            <center>
+             <img src="../assets/img/pumpkin.png" alt="pumpkin icon">
+            </center>
+          </div>
+          <div class="col">
+           <center>
+             <img src="../assets/img/pumpkin.png" alt="pumpkin icon">
+           </center>
+          </div>
+        </div>
       </div>
-
-    <!-- Ini row utama Second row -->
+     <div class="col">
+       <!-- blank -->
+     </div>
     </div>
-    <!-- Jangan dijadiin components -->
-
 </template>
 
 <script>
-
-import {db} from '../firebase'
 export default {
   name: 'FirstRow',
   data () {
