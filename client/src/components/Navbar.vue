@@ -56,7 +56,8 @@ export default {
       console.log('logout')
       localStorage.removeItem('username')
       this.$router.push('Game')
-    },
+    }
+  },
 
   components: {
     Modalhowtoplay
