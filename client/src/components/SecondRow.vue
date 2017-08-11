@@ -27,11 +27,11 @@
 
         <div class="col">
           <center>
-            <img src="/resources/img/skull.png" alt="pumpkin icon">
+            <img src="../assets/img/skull.png" alt="pumpkin icon">
           </center>
           <br>
           <center>
-            <img src="/resources/img/skull.png" alt="pumpkin icon">
+            <img src="../assets/img/skull.png" alt="pumpkin icon">
           </center>
         </div>
       </div>
@@ -72,11 +72,11 @@
 
         <div class="col">
           <center>
-            <img src="/resources/img/ghost.png" alt="pumpkin icon">
+            <img src="../assets/img/ghost.png" alt="pumpkin icon">
           </center>
           <br>
           <center>
-            <img src="/resources/img/ghost.png" alt="pumpkin icon">
+            <img src="../assets/img/ghost.png" alt="pumpkin icon">
           </center>
         </div>
 

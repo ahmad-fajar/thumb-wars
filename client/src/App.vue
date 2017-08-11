@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <navbar></navbar>
     <div class="container-fluid">
       <router-view></router-view>
     </div>
@@ -8,12 +7,9 @@
 </template>
 
 <script>
-import Navbar from '@/components/Navbar'
 export default {
   name: 'app',
-  components: {
-    Navbar
-  }
+  components: {}
 }
 </script>
 
@@ -29,9 +25,9 @@ export default {
 
 /*From own CSS*/
 
-* {
+/** {
   border: 1px solid white;
-}
+}*/
 
 body {
   background-color: black;
