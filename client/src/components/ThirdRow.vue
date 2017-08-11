@@ -1,17 +1,10 @@
 <template lang="html">
-  <!-- third row -->
-
-  <!-- Ini row utama third row -->
   <div class="row">
-  <!-- Jangan dijadiin components -->
-
-    <!-- Ini column pertama -->
-    <!-- Ini cuma column kosong, terserah jadiin apa gak -->
     <div class="col">
       <!-- blank -->
     </div>
 
-
+    <div class="col">
       <div class="row">
         <div class="col">
           <center>
@@ -34,16 +27,14 @@
       </div>
       <h2>{{ thumbs[0].player3.playerName }} : {{ thumbs[0].player3.choosedValue }}</h2>
 
+    </div>
 
-    <!-- Ini column ketiga -->
-    <!-- Ini cuma column kosong, terserah jadiin apa gak -->
+
     <div class="col">
       <!-- blank -->
     </div>
 
-  <!-- Ini row utama third row -->
   </div>
-  <!-- Jangan dijadiin components -->
 
 </template>
 
@@ -97,6 +88,7 @@ export default {
         isinya: this.game
       })
     }
+  }
 }
 </script>
 

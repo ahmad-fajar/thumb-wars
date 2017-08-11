@@ -1,6 +1,4 @@
 <template lang="html">
-  <!-- Second row -->
-
   <div class="row">
     <div class="col">
 
@@ -13,64 +11,67 @@
             </center>
           </div>
           <h2>{{ thumbs[0].player4.playerName }} : {{ thumbs[0].player4.choosedValue }}</h2>
-  <!-- Ini row utama Second row -->
-  <div class="row">
-  <!-- Jangan dijadiin components -->
-
-    
-    <!-- Ini column kedua -->
-    <!-- Kasih aja nama: Scoreboard.vue atau apa aja -->
-    <!-- Karena ini column score board -->
-    <div class="col">
-
-      <div class="row">
-        <div class="col">
-          <p>
-            <h4 class="username"><strong>Score Board</strong></h4>
-          </p>
         </div>
-      </div>
 
-      <div class="row">
         <div class="col">
-          <div class="score-board">
+           <center>
+             <img src="../assets/img/skull.png" alt="pumpkin icon">
+           </center>
+           <br>
+           <center>
+             <img src="../assets/img/skull.png" alt="pumpkin icon">
+           </center>
+         </div>
+       </div>
 
+   </div>
+
+   <div class="col">
+
+       <div class="row">
+         <div class="col">
+           <div class="score-board">
+
+           </div>
+         </div>
+         <div class="col">
+           <div class="score-board">
+
+           </div>
+         </div>
+       </div>
+
+       <div class="row">
+         <div class="col">
+           <center>
+             <a href="#" class="btn btn-md active" role="button" aria-pressed="true">1</a>
+             <a href="#" class="btn btn-md active" role="button" aria-pressed="true">2</a>
+             <a href="#" class="btn btn-md active" role="button" aria-pressed="true">3</a>
+             <a href="#" class="btn btn-md active" role="button" aria-pressed="true">4</a>
+             <a href="#" class="btn btn-md active" role="button" aria-pressed="true">5</a>
+             <a href="#" class="btn btn-md active" role="button" aria-pressed="true">6</a>
+           </center>
+         </div>
+       </div>
+
+       </div>
+
+       <div class="col">
+
+       <div class="row">
+
+         <div class="col">
+           <center>
+             <img src="../assets/img/ghost.png" alt="pumpkin icon">
+           </center>
+           <br>
+           <center>
+             <img src="../assets/img/ghost.png" alt="pumpkin icon">
+           </center>
           </div>
-        </div>
-        <div class="col">
-          <div class="score-board">
 
-          </div>
-        </div>
-      </div>
+          <div class="col col-btn">
 
-      <div class="row">
-        <div class="col">
-          <center>
-            <a href="#" class="btn btn-md active" role="button" aria-pressed="true">1</a>
-            <a href="#" class="btn btn-md active" role="button" aria-pressed="true">2</a>
-            <a href="#" class="btn btn-md active" role="button" aria-pressed="true">3</a>
-            <a href="#" class="btn btn-md active" role="button" aria-pressed="true">4</a>
-            <a href="#" class="btn btn-md active" role="button" aria-pressed="true">5</a>
-            <a href="#" class="btn btn-md active" role="button" aria-pressed="true">6</a>
-          </center>
-        </div>
-      </div>
-
-    </div>
-    <!-- Ini column kedua -->
-
-        <div class="col">
-          <center>
-            <img src="../assets/img/ghost.png" alt="pumpkin icon">
-          </center>
-          <br>
-          <center>
-            <img src="../assets/img/ghost.png" alt="pumpkin icon">
-          </center>
-        </div>
-
-        <div class="col col-btn">
           <div v-for="n in 3" class="col">
             <center>
               <a @click="postFirebase2(n-1)" class="btn btn-md active" role="button" aria-pressed="true">{{ n-1 }}</a>
@@ -84,7 +85,6 @@
     </div>
 
     </div>
-  <!-- Jangan dijadiin components -->
 
 </template>
 
@@ -145,6 +145,7 @@ export default {
         isinya: this.game
       })
     }
+  }
 }
 </script>
 
