@@ -17,9 +17,12 @@
           <li class="nav-item active" >
             <router-link class="nav-link" to="login" v-if="!nama">Join</router-link>
           </li>
-          <li class="nav-item active" v-if="nama">
-            <router-link class="nav-link" to="login" @click="logout()">Out</router-link>
+          <li class="nav-item active" v-if="nama&&nama!=''">
+            <button type="button" class="btn btn-primary" @click="logout()">Out</button>
           </li>
+          <!-- <li class="nav-item active" v-if="nama">
+            <a class="nav-link" href="login" @click="logout()">Out</a>
+          </li> -->
 
           <!-- tes nama -->
           <!-- <li class="nav-item active">
@@ -84,8 +87,8 @@ export default {
   },
 
   methods: {
-
     logout () {
+      console.log('logout')
       localStorage.removeItem('username')
       this.$router.push('Game')
     }
