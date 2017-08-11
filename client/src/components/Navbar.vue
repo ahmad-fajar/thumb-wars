@@ -34,51 +34,16 @@
           Cara bermain
         </button>
       </div>
-
       <!-- Modal -->
-      <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Pelajari cara bermain game ini dalam sekejap</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>
-                <h3>Untuk bermain:</h3>
-              </p>
-              <div class="container-fluid">
-                <div class="row">
-
-                  <p class="text-left">
-                    <h5>Jika kamu mendapat giliran</h5>
-                  </p>
-                  <p class="text-justify">
-                    Jika kamu mendapat giliran, hal yang perlu kamu lakukan adalah menebak angka yang kamu inginkan. Tebaklah salah satu dari angka 1 hingga 6. Jika tebakanmu sama dengan jumlah angka yang ditebak oleh lawan-lawanmu, maka kamu akan mendapat 1 poin. Jika kamu melakukan hal yang sama lagi kemudian, maka kamu akan mendapat 2 poin. Dan artinya kamu menang.
-                  </p>
-                  <p>
-
-                  </p>
-
-                </div>
-              </div>
-
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <Modalhowtoplay></Modalhowtoplay>
+      <!-- Modal -->
     </nav>
   </div>
 
 </template>
 
 <script>
+import Modalhowtoplay from '@/components/Modalhowtoplay'
 export default {
   data () {
     return {
@@ -91,7 +56,10 @@ export default {
       console.log('logout')
       localStorage.removeItem('username')
       this.$router.push('Game')
-    }
+    },
+
+  components: {
+    Modalhowtoplay
   }
 }
 </script>
