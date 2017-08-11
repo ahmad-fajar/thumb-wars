@@ -1,5 +1,6 @@
 <template lang="html">
   <!-- Second row -->
+
   <div class="row">
     <div class="col">
 
@@ -12,22 +13,23 @@
             </center>
           </div>
           <h2>{{ thumbs[0].player4.playerName }} : {{ thumbs[0].player4.choosedValue }}</h2>
+  <!-- Ini row utama Second row -->
+  <div class="row">
+  <!-- Jangan dijadiin components -->
 
-        </div>
+    
+    <!-- Ini column kedua -->
+    <!-- Kasih aja nama: Scoreboard.vue atau apa aja -->
+    <!-- Karena ini column score board -->
+    <div class="col">
 
+      <div class="row">
         <div class="col">
-          <center>
-            <img src="../assets/img/skull.png" alt="pumpkin icon">
-          </center>
-          <br>
-          <center>
-            <img src="../assets/img/skull.png" alt="pumpkin icon">
-          </center>
+          <p>
+            <h4 class="username"><strong>Score Board</strong></h4>
+          </p>
         </div>
       </div>
-
-    </div>
-    <div class="col">
 
       <div class="row">
         <div class="col">
@@ -56,9 +58,7 @@
       </div>
 
     </div>
-    <div class="col">
-
-      <div class="row">
+    <!-- Ini column kedua -->
 
         <div class="col">
           <center>
@@ -82,7 +82,10 @@
       </div>
 
     </div>
-  </div>
+
+    </div>
+  <!-- Jangan dijadiin components -->
+
 </template>
 
 <script>
@@ -142,7 +145,6 @@ export default {
         isinya: this.game
       })
     }
-  }
 }
 </script>
 

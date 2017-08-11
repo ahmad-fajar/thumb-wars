@@ -21,10 +21,13 @@
 }
 
 /*From own CSS*/
-
 /** {
   border: 1px solid white;
 }*/
+
+#app {
+  margin-top: 10px;
+}
 
 body {
   background-color: black;
@@ -43,8 +46,8 @@ img {
 }
 
 .container {
-  width: 95%;
-  margin: 10px 10px;
+  width: 50%;
+  margin-left: 310px;
 }
 
 .container-fluid {
@@ -52,7 +55,7 @@ img {
 }
 
 .col {
-  margin: 20px 10px;
+  margin: 5px 5px;
 }
 
 .col-btn {
@@ -71,6 +74,19 @@ img {
 .btn {
   background-color: #FF9814;
   border-radius: 50px;
+  color: #fff;
+}
+
+.score-board {
+  height: 200px;
+  width: auto;
+}
+
+.detail-text {
+  margin-top: 10px;
+}
+
+.username {
   color: #fff;
 }
 
