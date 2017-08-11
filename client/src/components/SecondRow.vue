@@ -1,16 +1,23 @@
 <template lang="html">
   <!-- Second row -->
 
+  <div class="row">
+    <div class="col">
+
+      <div class="row">
+        <div class="col col-btn">
+
+          <div v-for="n in 3" class="col">
+            <center>
+              <a @click="postFirebase4(n-1)" class="btn btn-md active" role="button" aria-pressed="true">{{ n-1 }}</a>
+            </center>
+          </div>
+          <h2>{{ thumbs[0].player4.playerName }} : {{ thumbs[0].player4.choosedValue }}</h2>
   <!-- Ini row utama Second row -->
   <div class="row">
   <!-- Jangan dijadiin components -->
 
-    <!-- Ini column pertama -->
-    <!-- Kasih aja nama: Skull.vue atau apa aja -->
-    <!-- Karena ini column karakter skull -->
-    <Skull></Skull>
-    <!-- Ini column pertama -->
-
+    
     <!-- Ini column kedua -->
     <!-- Kasih aja nama: Scoreboard.vue atau apa aja -->
     <!-- Karena ini column score board -->
@@ -53,26 +60,91 @@
     </div>
     <!-- Ini column kedua -->
 
-    <!-- Ini column ketiga -->
-    <!-- Kasih aja nama: Ghost.vue atau apa aja -->
-    <!-- Karena ini column karakter ghost -->
-    <Ghost></Ghost>
-    <!-- Ini column ketiga -->
+        <div class="col">
+          <center>
+            <img src="../assets/img/ghost.png" alt="pumpkin icon">
+          </center>
+          <br>
+          <center>
+            <img src="../assets/img/ghost.png" alt="pumpkin icon">
+          </center>
+        </div>
 
-  <!-- Ini row utama Second row -->
-  </div>
+        <div class="col col-btn">
+          <div v-for="n in 3" class="col">
+            <center>
+              <a @click="postFirebase2(n-1)" class="btn btn-md active" role="button" aria-pressed="true">{{ n-1 }}</a>
+            </center>
+          </div>
+          <h2>{{ thumbs[0].player2.playerName }} : {{ thumbs[0].player2.choosedValue }}</h2>
+        </div>
+
+      </div>
+
+    </div>
+
+    </div>
   <!-- Jangan dijadiin components -->
 
 </template>
 
 <script>
-import Skull from '@/components/Skull'
-import Ghost from '@/components/Ghost'
 export default {
-  components: {
-    Skull,
-    Ghost
-  }
+  name: 'SecondRow',
+  data () {
+    return {
+      game: {
+        totalValue: 0,
+        gameTurn: 'adith',
+        guessedValue: 0,
+        player1: {
+          playerName: 'fajar',
+          thumbWarsID: localStorage.getItem('thumbWarsID') || null,
+          choosedValue: 0
+        },
+        player2: {
+          playerName: 'adith',
+          thumbWarsID: localStorage.getItem('thumbWarsID') || null,
+          choosedValue: 0
+        },
+        player3: {
+          playerName: 'budhi',
+          thumbWarsID: localStorage.getItem('thumbWarsID') || null,
+          choosedValue: 0
+        },
+        player4: {
+          playerName: 'jason',
+          thumbWarsID: localStorage.getItem('thumbWarsID') || null,
+          choosedValue: 0
+        }
+      }
+    }
+  },
+  firebase () {
+    return {
+      thumbs: this.$db.ref('/thumb-wars/')
+    }
+  },
+  computed: {
+    totalValue: function () {
+      return this.game.player1.choosedValue + this.game.player2.choosedValue + this.game.player3.choosedValue + this.game.player4.choosedValue
+    }
+  },
+  methods: {
+    postFirebase2: function (val) {
+      console.log('masuk')
+      this.game.player2.choosedValue = val
+      this.$firebaseRefs.thumbs.set({
+        isinya: this.game
+      })
+    },
+    postFirebase4: function (val) {
+      console.log('masuk')
+      this.game.player4.choosedValue = val
+      this.$firebaseRefs.thumbs.set({
+        isinya: this.game
+      })
+    }
 }
 </script>
 
