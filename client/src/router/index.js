@@ -3,9 +3,12 @@ import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import Game from '@/components/Game'
 import Login from '@/components/Login'
-import Signup from '@/components/Signup'
 
 Vue.use(Router)
+
+// import auth from '../auth'
+// Vue.http.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('id_token')
+// auth.checkAuth()
 
 export default new Router({
   mode: 'history',
@@ -24,11 +27,7 @@ export default new Router({
       path: '/login',
       name: 'Login',
       component: Login
-    },
-    {
-      path: '/signup',
-      name: 'Signup',
-      component: Signup
     }
   ]
 })
+

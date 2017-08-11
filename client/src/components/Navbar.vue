@@ -13,18 +13,18 @@
             <a class="nav-link" href="#">Team <span class="sr-only">(current)</span></a>
           </li>
 
-          <!-- signup -->
-          <li class="nav-item active" v-if="!user.authenticated">
-            <router-link class="nav-link" to="/signup">Sign Up</router-link>
+          <!-- join - out -->
+          <li class="nav-item active" >
+            <router-link class="nav-link" to="login" v-if="!nama">Join</router-link>
+          </li>
+          <li class="nav-item active" v-if="nama">
+            <router-link class="nav-link" to="login" @click="logout()">Out</router-link>
           </li>
 
-          <!-- login - logout -->
-          <li class="nav-item active" v-if="!user.authenticated">
-            <router-link class="nav-link" to="login">Login</router-link>
-          </li>
-          <li class="nav-item active" v-if="user.authenticated">
-            <router-link class="nav-link" to="login" @click="logout()">Logout</router-link>
-          </li>
+          <!-- tes nama -->
+          <!-- <li class="nav-item active">
+            <a class="nav-link" href="#">{{nama}}</a>
+          </li> -->
 
         </ul>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
@@ -76,18 +76,18 @@
 </template>
 
 <script>
-import auth from '../auth'
 export default {
   data () {
     return {
-      user: auth.user
+      nama: localStorage.getItem('username')
     }
   },
 
   methods: {
 
     logout () {
-      auth.logout()
+      localStorage.removeItem('username')
+      this.$router.push('Game')
     }
   }
 }
