@@ -74,4 +74,8 @@ img {
   color: #fff;
 }
 
+.username {
+  color: #fff;
+}
+
 </style>

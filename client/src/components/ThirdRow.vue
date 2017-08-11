@@ -8,6 +8,12 @@
 
       <div class="row">
         <div class="col">
+          <h2 class="username">{{ thumbs[0].player3.playerName }} : {{ thumbs[0].player3.choosedValue }}</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
           <center>
             <img src="../assets/img/mummyman.png" alt="pumpkin icon">
           </center>
@@ -22,11 +28,11 @@
       <div class="row">
         <div v-for="n in 3" class="col">
           <center>
-            <a @click="postFirebase(n-1)" class="btn btn-md active" role="button" aria-pressed="true">{{ n-1 }}</a>
+            <a @click="updateFirebase(n-1)" class="btn btn-md active" role="button" aria-pressed="true">{{ n-1 }}</a>
           </center>
         </div>
       </div>
-      <h2>{{ thumbs[0].player3.playerName }} : {{ thumbs[0].player3.choosedValue }}</h2>
+      <!-- <h2>{{ thumbs[0].player3.playerName }} : {{ thumbs[0].player3.choosedValue }}</h2> -->
 
     </div>
     <div class="col">
@@ -74,16 +80,14 @@ export default {
   },
   computed: {
     totalValue: function () {
-      return this.game.player1.choosedValue + this.game.player2.choosedValue + this.game.player3.choosedValue + this.game.player4.choosedValue
+      return this.thumbs[0].player1.choosedValue + this.thumbs[0].player2.choosedValue + this.thumbs[0].player3.choosedValue + this.thumbs[0].player4.choosedValue
     }
   },
   methods: {
-    postFirebase: function (val) {
-      console.log('masuk')
-      this.game.player3.choosedValue = val
-      this.$firebaseRefs.thumbs.set({
-        isinya: this.game
-      })
+    updateFirebase: function (val) {
+      var thumbRef = this.$db.ref('thumb-wars')
+      thumbRef.child('isinya/player3/choosedValue').set(val)
+      thumbRef.child('isinya/totalValue').set(this.totalValue)
     }
   }
 }

@@ -1,17 +1,25 @@
 <template lang="html">
   <!-- Second row -->
   <div class="row">
+
+
     <div class="col">
+
+      <div class="row">
+        <div class="col">
+          <h2 class="username">{{ thumbs[0].player4.playerName }} : {{ thumbs[0].player4.choosedValue }}</h2>
+        </div>
+      </div>
 
       <div class="row">
         <div class="col col-btn">
 
           <div v-for="n in 3" class="col">
             <center>
-              <a @click="postFirebase4(n-1)" class="btn btn-md active" role="button" aria-pressed="true">{{ n-1 }}</a>
+              <a @click="updateFirebase4(n-1)" class="btn btn-md active" role="button" aria-pressed="true">{{ n-1 }}</a>
             </center>
           </div>
-          <h2>{{ thumbs[0].player4.playerName }} : {{ thumbs[0].player4.choosedValue }}</h2>
+          <!-- <h2>{{ thumbs[0].player4.playerName }} : {{ thumbs[0].player4.choosedValue }}</h2> -->
 
         </div>
 
@@ -31,13 +39,20 @@
 
       <div class="row">
         <div class="col">
+          <h2 class="username">Score Board</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
           <div class="score-board">
 
           </div>
         </div>
         <div class="col">
           <div class="score-board">
-
+            <h1>TOTAL</h1>
+            <h1>{{ thumbs[0].totalValue}}</h1>
           </div>
         </div>
       </div>
@@ -59,6 +74,12 @@
     <div class="col">
 
       <div class="row">
+        <div class="col">
+          <h2 class="username">{{ thumbs[0].player2.playerName }} : {{ thumbs[0].player2.choosedValue }}</h2>
+        </div>
+      </div>
+
+      <div class="row">
 
         <div class="col">
           <center>
@@ -73,10 +94,10 @@
         <div class="col col-btn">
           <div v-for="n in 3" class="col">
             <center>
-              <a @click="postFirebase2(n-1)" class="btn btn-md active" role="button" aria-pressed="true">{{ n-1 }}</a>
+              <a @click="updateFirebase2(n-1)" class="btn btn-md active" role="button" aria-pressed="true">{{ n-1 }}</a>
             </center>
           </div>
-          <h2>{{ thumbs[0].player2.playerName }} : {{ thumbs[0].player2.choosedValue }}</h2>
+          <!-- <h2>{{ thumbs[0].player2.playerName }} : {{ thumbs[0].player2.choosedValue }}</h2> -->
         </div>
 
       </div>
@@ -124,23 +145,19 @@ export default {
   },
   computed: {
     totalValue: function () {
-      return this.game.player1.choosedValue + this.game.player2.choosedValue + this.game.player3.choosedValue + this.game.player4.choosedValue
+      return this.thumbs[0].player1.choosedValue + this.thumbs[0].player2.choosedValue + this.thumbs[0].player3.choosedValue + this.thumbs[0].player4.choosedValue
     }
   },
   methods: {
-    postFirebase2: function (val) {
-      console.log('masuk')
-      this.game.player2.choosedValue = val
-      this.$firebaseRefs.thumbs.set({
-        isinya: this.game
-      })
+    updateFirebase2: function (val) {
+      var thumbRef = this.$db.ref('thumb-wars')
+      thumbRef.child('isinya/player2/choosedValue').set(val)
+      thumbRef.child('isinya/totalValue').set(this.totalValue)
     },
-    postFirebase4: function (val) {
-      console.log('masuk')
-      this.game.player4.choosedValue = val
-      this.$firebaseRefs.thumbs.set({
-        isinya: this.game
-      })
+    updateFirebase4: function (val) {
+      var thumbRef = this.$db.ref('thumb-wars')
+      thumbRef.child('isinya/player4/choosedValue').set(val)
+      thumbRef.child('isinya/totalValue').set(this.totalValue)
     }
   }
 }
