@@ -46,7 +46,8 @@
       <div class="row">
         <div class="col">
           <div class="score-board">
-
+            <h1>Guessed</h1>
+            <h1>{{ thumbs[0].guessedValue}}</h1>
           </div>
         </div>
         <div class="col">
@@ -60,12 +61,7 @@
       <div class="row">
         <div class="col">
           <center>
-            <a href="#" class="btn btn-md active" role="button" aria-pressed="true">1</a>
-            <a href="#" class="btn btn-md active" role="button" aria-pressed="true">2</a>
-            <a href="#" class="btn btn-md active" role="button" aria-pressed="true">3</a>
-            <a href="#" class="btn btn-md active" role="button" aria-pressed="true">4</a>
-            <a href="#" class="btn btn-md active" role="button" aria-pressed="true">5</a>
-            <a href="#" class="btn btn-md active" role="button" aria-pressed="true">6</a>
+            <a v-for="n in 9" @click="updateGuess(n - 1)" class="btn btn-md active" role="button" aria-pressed="true">{{ n-1 }}</a>
           </center>
         </div>
       </div>
@@ -158,6 +154,10 @@ export default {
       var thumbRef = this.$db.ref('thumb-wars')
       thumbRef.child('isinya/player4/choosedValue').set(val)
       thumbRef.child('isinya/totalValue').set(this.totalValue)
+    },
+    updateGuess (val) {
+      var thumbRef = this.$db.ref('thumb-wars')
+      thumbRef.child('isinya/guessedValue').set(val)
     }
   }
 }
